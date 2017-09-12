@@ -25,5 +25,9 @@ func TestBar(t *testing.T) {
 		t.Fatal("Invalid model")
 	}
 
+	if m.NumOfWheels() != 5 {
+		t.Fatal("Star car should have 5 wheels")
+	}
+
 	t.Logf("%v car has %d wheels", car.GetModelName(), car.NumOfWheels())
 }
