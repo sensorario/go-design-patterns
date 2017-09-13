@@ -1,0 +1,27 @@
+# Creational » Prototype
+
+## Description
+
+With this pattern, is used an already created instance of some type to clone it and complete it with the particular needs of each context. Objects to clone are created at compilation time and can be cloned as many times it is needed at runtime.
+
+```go
+firstInstance := GetInstance()
+
+secondInstance := GetInstance()
+if firstInstance != secondInstance {
+	t.Error("expected same instance")
+}
+```
+
+Any following calls, update first intance.
+
+```go
+thirdInstance := GetInstance()
+if thirdInstance.NumberOfCalls() != 3 {
+	t.Error("expected three calls")
+}
+```
+
+## Few words …
+
+Is not good pattern if used to bring the state of the applicatoin and can cnange during its lifecycle. Making something global to avoid passing it around is a code smell. But use it to read configuration is good. Used to load a resource just first time is requested and to provide that resource everywere is a good way to use this pattern.
