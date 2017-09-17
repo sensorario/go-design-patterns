@@ -110,3 +110,25 @@ func (c *BiciclettaBuilder) Build() Product {
 	return c.p
 }
 ```
+
+## Usage
+
+The director must build a vehicle like a car. Once the builder is provided. The director ask the builder to build the car. Finally we'll have right model of car.
+
+```go
+director := ManufacturingDirector{}
+
+carBuilder := &CarBuilder{}
+director.SetBuilder(carBuilder)
+director.Construct()
+car := carBuilder.Build()
+```
+
+The director must build a vehicle like a bike. Once the builder is provided. The director ask the builder to build the bike. Finally we'll have right model of bike.
+
+```go
+biciclettaBuilder := &BiciclettaBuilder{}
+director.SetBuilder(biciclettaBuilder)
+director.Construct()
+bike := biciclettaBuilder.Build()
+```

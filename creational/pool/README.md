@@ -73,3 +73,20 @@ func (p *Pool) Receive(object PoolObject) {
 	}
 }
 ```
+
+## Usage
+
+First, the pool provide two object. Second, the pool receive one used object. Third, another loan is requested but instead of provide another instance of new object, thirdObject contains firstObject. No time is spent to build another object.
+
+```go
+pool := InitPool()
+firstObject := pool.Loan()
+secondObject := pool.Loan()
+
+pool.Receive(firstObject)
+thirdObject := pool.Loan()
+
+if firstObject.id != thirdObject.id {
+  panic("thir object must contain firs one")
+}
+```

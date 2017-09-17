@@ -21,3 +21,26 @@ func TestFoo(t *testing.T) {
 	t.Logf("%v car has %d wheels", car.GetModelName(), car.NumOfWheels())
 }
 ```
+
+## Usage
+
+BuildFactory provide a factory of italian cars. Then italian builder build a particular model of car. This model must have 4 wheels.
+
+```go
+fca, _ := BuildFactory(ItalianType)
+m, _ := fca.Build(FerrariModel)
+car, err := m.(Vehicle)
+if model.NumOfWheels() != 4 {
+  panic("Ferrari shoud have 4 wheels")
+}
+```
+
+BuildFactory provide a factory of italian cars. Then italian builder build a particular model of car. This model must have 5 wheels.
+
+```go
+fca, _ := BuildFactory(ItalianType)
+model, _ := fca.Build(CarWithFiveWheelModel)
+if model.NumOfWheels() != 5 {
+  panic("the car should have 5 wheels")
+}
+```
