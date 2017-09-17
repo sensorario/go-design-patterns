@@ -5,6 +5,7 @@ import "strconv"
 
 func TestBuilderPattern(t *testing.T) {
 	director := ManufacturingDirector{}
+
 	carBuilder := &CarBuilder{}
 	director.SetBuilder(carBuilder)
 	director.Construct()
@@ -13,11 +14,11 @@ func TestBuilderPattern(t *testing.T) {
 		t.Errorf("Something went wrong : " + strconv.Itoa(car.Wheels) + " wheels found")
 	}
 
-	bicicletta := &BiciclettaBuilder{}
-	director.SetBuilder(bicicletta)
+	biciclettaBuilder := &BiciclettaBuilder{}
+	director.SetBuilder(biciclettaBuilder)
 	director.Construct()
-	biciletta := bicicletta.Build()
-	if biciletta.Wheels != 2 {
-		t.Errorf("Something went wrong : " + strconv.Itoa(bicicletta.Wheels) + " wheels found")
+	bike := biciclettaBuilder.Build()
+	if bike.Wheels != 2 {
+		t.Errorf("Something went wrong : " + strconv.Itoa(bike.Wheels) + " wheels found")
 	}
 }
