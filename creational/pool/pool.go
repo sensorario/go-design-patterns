@@ -38,11 +38,9 @@ func (p *Pool) Loan() PoolObject {
 
 func (p *Pool) Receive(object PoolObject) {
 	p.idle.PushBack(object)
-	for e, i := p.active.Front(), 0; e != nil; e, i = e.Next(), i+1 {
-		if object == e.Value.(PoolObject) {
-			p.active.Remove(e)
-			return
-		}
+	for e := p.active.Front(); e != nil; e = e.Next() {
+		p.active.Remove(e)
+		return
 	}
 }
 
