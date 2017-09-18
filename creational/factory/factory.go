@@ -1,6 +1,6 @@
 package factory
 
-import "errors"
+import "fmt"
 
 const (
 	Italian = 1
@@ -18,9 +18,9 @@ func GetTranslator(m int) (Translator, error) {
 	case English:
 		return new(EnglishGreeting), nil
 	default:
-		return nil, errors.New("Unknown building")
+		return nil, fmt.Errorf("Unknown building")
 	}
-	return nil, errors.New("Not implemented yet")
+	return nil, fmt.Errorf("Not implemented yet")
 }
 
 type ItalianGreeting struct{}

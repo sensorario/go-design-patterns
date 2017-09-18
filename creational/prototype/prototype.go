@@ -1,6 +1,6 @@
 package prototype
 
-import "errors"
+import "fmt"
 
 type ShirtCloner interface {
 	GetClone(s int) (ItemInfoGetter, error)
@@ -24,7 +24,7 @@ func (s *ShirtsCache) GetClone(m int) (ItemInfoGetter, error) {
 		newItem := *whitePrototype
 		return &newItem, nil
 	}
-	return nil, errors.New("Not implemented yet")
+	return nil, fmt.Errorf("Not implemented yet")
 }
 
 type ItemInfoGetter interface {

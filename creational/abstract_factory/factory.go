@@ -1,7 +1,6 @@
 package factory
 
 import (
-	"errors"
 	"fmt"
 )
 
@@ -53,7 +52,7 @@ func (i *ItalianFactory) Build(v int) (Vehicle, error) {
 	case CarWithFiveWheelModel:
 		return new(CarWithFiveWheelType), nil
 	}
-	return nil, errors.New(fmt.Sprintf("No Italian cars of type %d\n", v))
+	return nil, fmt.Errorf("No Italian cars of type %d\n", v)
 }
 
 func BuildFactory(f int) (VehicleFactory, error) {
@@ -61,6 +60,6 @@ func BuildFactory(f int) (VehicleFactory, error) {
 	case ItalianType:
 		return new(ItalianFactory), nil
 	default:
-		return nil, errors.New(fmt.Sprintf("No factory with id %d\n", f))
+		return nil, fmt.Errorf("No factory with id %d\n", f)
 	}
 }
