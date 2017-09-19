@@ -24,7 +24,7 @@ func InitPool() Pool {
 	return *pool
 }
 
-func (p *Pool) Loan() (*PoolObject, error) {
+func (p *Pool) Borrow() (*PoolObject, error) {
 	if p.idle.Len() > 0 {
 		for e, i := p.idle.Front(), 0; e != nil; e, i = e.Next(), i+1 {
 			if i == 0 {
