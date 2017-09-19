@@ -2,6 +2,9 @@ package pool
 
 import (
 	"container/list"
+	"errors"
+	"log"
+	"strconv"
 )
 
 type PoolObject struct {
@@ -21,19 +24,24 @@ func InitPool() Pool {
 	return *pool
 }
 
-func (p *Pool) Loan() PoolObject {
+func (p *Pool) Loan() (*PoolObject, error) {
 	if p.idle.Len() > 0 {
 		for e, i := p.idle.Front(), 0; e != nil; e, i = e.Next(), i+1 {
 			if i == 0 {
 				object := e.Value.(PoolObject)
-				return object
+				return &object, nil
 			}
 		}
 	}
 
+	log.Println(strconv.Itoa(p.active.Len()))
+	if p.NumberOfObjectsInPool() >= 3 {
+		return nil, errors.New("...")
+	}
+
 	object := PoolObject{p.NumberOfObjectsInPool() + 1}
 	p.active.PushBack(object)
-	return object
+	return &object, nil
 }
 
 func (p *Pool) Receive(object PoolObject) {
