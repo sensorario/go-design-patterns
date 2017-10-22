@@ -12,3 +12,4 @@
 ## [Structural](structural)
 
  * [Composite](structural/composite) [:notebook:](http://en.wikipedia.org/wiki/Composite_pattern)
+ * [Binary Tree compositions](structural/binary-tree-compositions) [:notebook:](https://en.wikipedia.org/wiki/Binary_tree)
