@@ -15,3 +15,4 @@
  * [Binary Tree compositions](structural/binary-tree-compositions) [:notebook:](https://en.wikipedia.org/wiki/Binary_tree)
  * [Adapter](structural/adapter) [:notebook:](https://en.wikipedia.org/wiki/Adapter_pattern)
  * [Bridge](structural/bridge) [:notebook:](https://en.wikipedia.org/wiki/Bridge_pattern)
+ * [Proxy](structural/proxy) [:notebook:](https://it.wikipedia.org/wiki/Proxy_pattern)
