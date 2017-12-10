@@ -11,8 +11,9 @@
 
 ## [Structural](structural)
 
- * [Composite](structural/composite) [:notebook:](http://en.wikipedia.org/wiki/Composite_pattern)
- * [Binary Tree compositions](structural/binary-tree-compositions) [:notebook:](https://en.wikipedia.org/wiki/Binary_tree)
  * [Adapter](structural/adapter) [:notebook:](https://en.wikipedia.org/wiki/Adapter_pattern)
+ * [Binary Tree compositions](structural/binary-tree-compositions) [:notebook:](https://en.wikipedia.org/wiki/Binary_tree)
  * [Bridge](structural/bridge) [:notebook:](https://en.wikipedia.org/wiki/Bridge_pattern)
- * [Proxy](structural/proxy) [:notebook:](https://it.wikipedia.org/wiki/Proxy_pattern)
+ * [Composite](structural/composite) [:notebook:](http://en.wikipedia.org/wiki/Composite_pattern)
+ * [Decorator](structural/decorator) [:notebook:](https://en.wikipedia.org/wiki/Decorator_pattern)
+ * [Proxy](structural/proxy) [:notebook:](https://en.wikipedia.org/wiki/Proxy_pattern)
