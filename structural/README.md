@@ -10,5 +10,5 @@ relationships.
  * [Bridge](bridge) [:notebook:](https://en.wikipedia.org/wiki/Bridge_pattern)
  * [Composite](composite) [:notebook:](http://en.wikipedia.org/wiki/Composite_pattern)
  * [Decorator](decorator) [:notebook:](https://en.wikipedia.org/wiki/Decorator_pattern)
- * [Flyweight](flyweight) [:notebook:](https://en.wikipedia.org/wiki/Flyweight)
+ * [Flyweight](flyweight) [:notebook:](https://en.wikipedia.org/wiki/Flyweight_pattern)
  * [Proxy](proxy) [:notebook:](https://en.wikipedia.org/wiki/Proxy_pattern)
