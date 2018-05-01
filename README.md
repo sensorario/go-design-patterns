@@ -20,3 +20,5 @@
  * [Proxy](structural/proxy) [:notebook:](https://en.wikipedia.org/wiki/Proxy_pattern)
 
 ## [Behavioral](behavioral)
+
+ * [Strategy](behavioral/strategy) [:notebook:](https://en.wikipedia.org/wiki/Strategy_pattern)
