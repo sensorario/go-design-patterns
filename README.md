@@ -1,5 +1,13 @@
 # Go Design Patterns
 
+## [Antipattern](antipattern) :no_entry:
+
+ * [Singleton](antipattern/singleton) [:notebook:](http://en.wikipedia.org/wiki/Singleton_pattern)
+
+## [Behavioral](behavioral)
+
+ * [Strategy](behavioral/strategy) [:notebook:](https://en.wikipedia.org/wiki/Strategy_pattern)
+
 ## [Creational](creational)
 
  * [Abstract Factory method](creational/abstract_factory) [:notebook:](http://en.wikipedia.org/wiki/Abstract_Factory_pattern)
@@ -17,11 +25,3 @@
  * [Decorator](structural/decorator) [:notebook:](https://en.wikipedia.org/wiki/Decorator_pattern)
  * [Flyweight](structural/flyweight) [:notebook:](https://en.wikipedia.org/wiki/Flyweight_pattern)
  * [Proxy](structural/proxy) [:notebook:](https://en.wikipedia.org/wiki/Proxy_pattern)
-
-## [Behavioral](behavioral)
-
- * [Strategy](behavioral/strategy) [:notebook:](https://en.wikipedia.org/wiki/Strategy_pattern)
-
-## [Antipattern](antipattern) :no_entry:
-
- * [Singleton](antipattern/singleton) [:notebook:](http://en.wikipedia.org/wiki/Singleton_pattern)
