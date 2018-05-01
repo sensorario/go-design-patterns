@@ -7,7 +7,6 @@
  * [Factory method](creational/factory) [:notebook:](http://en.wikipedia.org/wiki/Factory_pattern)
  * [Object Pool](creational/pool) [:notebook:](http://en.wikipedia.org/wiki/Object_Pool_pattern)
  * [Prototype](creational/prototype) [:notebook:](http://en.wikipedia.org/wiki/Prototype_pattern)
- * [Singleton](creational/singleton) [:notebook:](http://en.wikipedia.org/wiki/Singleton_pattern) (is considered an anti-pattern! :no_entry:)
 
 ## [Structural](structural)
 
@@ -22,3 +21,7 @@
 ## [Behavioral](behavioral)
 
  * [Strategy](behavioral/strategy) [:notebook:](https://en.wikipedia.org/wiki/Strategy_pattern)
+
+## [Antipattern](antipattern) :no_entry:
+
+ * [Singleton](antipattern/singleton) [:notebook:](http://en.wikipedia.org/wiki/Singleton_pattern)
