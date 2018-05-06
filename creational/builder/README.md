@@ -1,5 +1,10 @@
 # Creational » Builder
 
+## Intent
+
+ - separate the construction of a complex object from its representation;
+ - parse a complex representation, create one of several targets;
+
 ## Description
 
 The Builder is a pattern used to build objects. Objects in go can be created with just {}. But in Go is possible to create objects composed by other objects. This is really idiomatic in go, as it doesn't support inheritance.

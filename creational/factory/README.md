@@ -1,5 +1,11 @@
 # Creational » Factory
 
+## Intent
+
+ - provide an interface for creating families of related or dependent objects
+ - a hierarchy that encapsulates: many possible "platforms", and the construction of a suite of "products".
+ - the new operator considered harmful.
+
 ## Description
 
 The purpose of current pattern is to provide an interface that fits the developer's needs, delegating the decision of objects creation to a factory. Only the factory knows how to create stuffs. The creation project is completely abstract here.

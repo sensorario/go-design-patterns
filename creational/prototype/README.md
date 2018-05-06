@@ -1,5 +1,11 @@
 # Creational » Prototype
 
+## Intent
+
+ - provide an interface for creating families of related or dependent objects
+ - a hierarchy that encapsulates: many possible "platforms", and the construction of a suite of "products".
+ - the new operator considered harmful.
+
 ## Description
 
 With this pattern, is used an already created instance of some type to clone it and complete it with the particular needs of each context. Objects to clone are created at compilation time and can be cloned as many times it is needed at runtime.

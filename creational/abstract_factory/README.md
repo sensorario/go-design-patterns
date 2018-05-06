@@ -1,5 +1,11 @@
 # Creational » Abstract Factory
 
+## Intent
+
+ - provide an interface for creating families of related or dependent objects
+ - a hierarchy that encapsulates: many possible "platforms", and the construction of a suite of "products".
+ - the new operator considered harmful.
+
 ## Description
 
 The difference from factory design pattern is that with this pattern it is possible to manage complex data type.

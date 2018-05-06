@@ -1,5 +1,10 @@
 # Creational » Singleton
 
+## Intent
+
+ - guarantee that a class has only one instance
+ - provide access to that instance
+
 ## Description
 
 The Singleton pattern aims to provide same instance of an objefct and guarantee that there are no duplicates. At the first call the instance is created. Following calls return first instance.
