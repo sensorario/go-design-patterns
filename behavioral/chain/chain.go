@@ -26,7 +26,7 @@ func (fr *EnglishTranslator) GetNext() TranslatorRing {
 }
 
 func (fr *EnglishTranslator) KnowsWord(s string) bool {
-	dict := NewEnglishDict()
+	dict := ItalianToEnglishDictionary()
 	if _, ok := dict[s]; ok {
 		return true
 	}
@@ -34,14 +34,14 @@ func (fr *EnglishTranslator) KnowsWord(s string) bool {
 }
 
 func (fr *EnglishTranslator) TranslationOf(s string) string {
-	dict := NewEnglishDict()
+	dict := ItalianToEnglishDictionary()
 	if val, ok := dict[s]; ok {
 		return val
 	}
 	panic("Oops!")
 }
 
-func NewEnglishDict() map[string]string {
+func ItalianToEnglishDictionary() map[string]string {
 	dict := map[string]string{}
 	dict["topo"] = "mouse"
 	dict["cocomero"] = "watermelon"
@@ -60,7 +60,7 @@ func (fr *FrenchTranslator) GetNext() TranslatorRing {
 	return fr.next
 }
 func (fr *FrenchTranslator) KnowsWord(s string) bool {
-	dict := NewFrenchDict()
+	dict := ItalianToFrancaisDictionary()
 	if _, ok := dict[s]; ok {
 		return true
 	}
@@ -68,14 +68,14 @@ func (fr *FrenchTranslator) KnowsWord(s string) bool {
 }
 
 func (fr *FrenchTranslator) TranslationOf(s string) string {
-	dict := NewFrenchDict()
+	dict := ItalianToFrancaisDictionary()
 	if val, ok := dict[s]; ok {
 		return val
 	}
 	panic("Wrong translation requested")
 }
 
-func NewFrenchDict() map[string]string {
+func ItalianToFrancaisDictionary() map[string]string {
 	dict := map[string]string{}
 	dict["casa"] = "maison"
 	return dict
@@ -93,7 +93,7 @@ func (fr *SpanishTranslator) GetNext() TranslatorRing {
 	return fr.next
 }
 func (fr *SpanishTranslator) KnowsWord(s string) bool {
-	dict := NewSpanishDict()
+	dict := ItalianToSpanishDictionary()
 	if _, ok := dict[s]; ok {
 		return true
 	}
@@ -101,14 +101,14 @@ func (fr *SpanishTranslator) KnowsWord(s string) bool {
 }
 
 func (fr *SpanishTranslator) TranslationOf(s string) string {
-	dict := NewSpanishDict()
+	dict := ItalianToSpanishDictionary()
 	if val, ok := dict[s]; ok {
 		return val
 	}
 	panic("Wrong translation requested")
 }
 
-func NewSpanishDict() map[string]string {
+func ItalianToSpanishDictionary() map[string]string {
 	dict := map[string]string{}
 	dict["ciao"] = "hola"
 	dict["cocomero"] = "sandía"
