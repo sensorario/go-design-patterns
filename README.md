@@ -6,7 +6,7 @@
 
 ## [Behavioral](behavioral)
 
- * [Chain of responsiblity](behavioral/chain) [:notebook:](https://it.wikipedia.org/wiki/Chain-of-responsibility_pattern)
+ * [Chain of responsiblity](behavioral/chain) [:notebook:](https://en.wikipedia.org/wiki/Chain-of-responsibility_pattern)
  * [Strategy](behavioral/strategy) [:notebook:](https://en.wikipedia.org/wiki/Strategy_pattern)
 
 ## [Creational](creational)
