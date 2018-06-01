@@ -8,6 +8,7 @@
 
  * [Chain of responsiblity](behavioral/chain) [:notebook:](https://en.wikipedia.org/wiki/Chain-of-responsibility_pattern)
  * [Strategy](behavioral/strategy) [:notebook:](https://en.wikipedia.org/wiki/Strategy_pattern)
+ * [Command](behavioral/command) [:notebook:](https://it.wikipedia.org/wiki/Command_pattern)
 
 ## [Creational](creational)
 
