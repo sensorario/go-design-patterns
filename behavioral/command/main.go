@@ -1,6 +1,8 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 type Command interface {
 	Execute()
@@ -10,43 +12,31 @@ type SomeCommand struct {
 	message string
 }
 
-func (s *SomeSpecialCommand) Execute() {
-	fmt.Println(" >>> ", s.message)
+func (s *SomeCommand) Execute() {
+	fmt.Println(s.message)
 }
 
 type SomeSpecialCommand struct {
 	message string
 }
 
-func (s *SomeCommand) Execute() {
-	fmt.Println(s.message)
+func (s *SomeSpecialCommand) Execute() {
+	message := "@" + s.message
+	fmt.Println(message)
 }
 
-func PrintlnCommand(s string) Command {
-	fmt.Println("Creating Command")
-	return &SomeCommand{
-		message: s,
-	}
-}
-
-func SpecialPrintlnCommand(s string) Command {
-	fmt.Println("Creating Command")
-	return &SomeSpecialCommand{
-		message: s,
-	}
-}
-
-type CommandQueue struct {
+type CommandInvoker struct {
 	queue []Command
 }
 
-func (c *CommandQueue) processQueue() {
+func (c *CommandInvoker) processQueue() {
 	for i := range c.queue {
 		c.queue[i].Execute()
 	}
 }
 
-func (c *CommandQueue) addToQueue(i Command) {
+func (c *CommandInvoker) addToQueue(i Command) {
+	fmt.Println("Appending command")
 	c.queue = append(c.queue, i)
 	if len(c.queue) == 3 {
 		c.processQueue()
@@ -55,8 +45,8 @@ func (c *CommandQueue) addToQueue(i Command) {
 }
 
 func main() {
-	c := CommandQueue{}
-	c.addToQueue(PrintlnCommand("Ciaone"))
-	c.addToQueue(PrintlnCommand("Bar"))
-	c.addToQueue(SpecialPrintlnCommand("Foo"))
+	c := CommandInvoker{}
+	c.addToQueue(&SomeCommand{"Simone"})
+	c.addToQueue(&SomeCommand{"Gentili"})
+	c.addToQueue(&SomeSpecialCommand{"sensorario"})
 }
