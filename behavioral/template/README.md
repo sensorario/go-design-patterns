@@ -2,8 +2,8 @@
 
 ## Description
 
-[Strategy](behavioral/strategy) pattern consists in a different way to solve
-same problem with different strategies. In [Strategy](behavioral/strategy)
+[Strategy](../strategy) pattern consists in a different way to solve
+same problem with different strategies. In [Strategy](../strategy)
 entire algorithm is store in different classes. In Template pattern, instead,
 the algorithm is just one. The template defines steps but some other steps are
 deferred to user.
@@ -11,7 +11,7 @@ deferred to user.
 ## Implementation
 
 In this case the template is a sort of flow of steps to solve a problem. While
-in [strategy](behavioral/strategy) pattern each [strategy](behavioral/strategy)
+in [strategy](../strategy) pattern each [strategy](../strategy)
 implements entire solution, in this case the template define the steps
 execution but defer one or more steps to the user. In this case, the deferred
 step is called `templateSteps`.
