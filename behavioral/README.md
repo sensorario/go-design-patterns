@@ -8,3 +8,4 @@ We are going to deal with behaviors instead of define structures or encapsulate 
  * [Chain of Responsibility](chain) [:notebook:](https://en.wikipedia.org/wiki/Chain-of-responsibility_pattern)
  * [Command](command) [:notebook:](https://en.wikipedia.org/wiki/Command_pattern)
  * [Template](template) [:notebook:](https://en.wikipedia.org/wiki/Template_pattern)
+ * [Memento](memento) [:notebook:](https://en.wikipedia.org/wiki/Memento_pattern)

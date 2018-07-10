@@ -10,6 +10,7 @@
  * [Strategy](behavioral/strategy) [:notebook:](https://en.wikipedia.org/wiki/Strategy_pattern)
  * [Command](behavioral/command) [:notebook:](https://en.wikipedia.org/wiki/Command_pattern)
  * [Template](behavioral/template) [:notebook:](https://en.wikipedia.org/wiki/Template_pattern)
+ * [Memento](behavioral/memento) [:notebook:](https://en.wikipedia.org/wiki/Memento_pattern)
 
 ## [Creational](creational)
 
