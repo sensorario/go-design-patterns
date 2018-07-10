@@ -45,4 +45,8 @@ func TestStoresIdleState(t *testing.T) {
 		t.Error("Unexpected state found")
 	}
 }
+
+func (o *originator) ExtractAndStoreState(m memento) {
+	o.state = m.state
+}
 ```
