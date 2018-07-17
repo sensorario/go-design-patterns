@@ -7,10 +7,11 @@
 ## [Behavioral](behavioral)
 
  * [Chain of responsiblity](behavioral/chain) [:notebook:](https://en.wikipedia.org/wiki/Chain-of-responsibility_pattern)
- * [Strategy](behavioral/strategy) [:notebook:](https://en.wikipedia.org/wiki/Strategy_pattern)
  * [Command](behavioral/command) [:notebook:](https://en.wikipedia.org/wiki/Command_pattern)
- * [Template](behavioral/template) [:notebook:](https://en.wikipedia.org/wiki/Template_pattern)
+ * [Interpreter](behavioral/interpreter) [:notebook:](https://en.wikipedia.org/wiki/Interpreter_pattern)
  * [Memento](behavioral/memento) [:notebook:](https://en.wikipedia.org/wiki/Memento_pattern)
+ * [Strategy](behavioral/strategy) [:notebook:](https://en.wikipedia.org/wiki/Strategy_pattern)
+ * [Template](behavioral/template) [:notebook:](https://en.wikipedia.org/wiki/Template_pattern)
 
 ## [Creational](creational)
 
