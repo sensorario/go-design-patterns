@@ -12,3 +12,4 @@ relationships.
  * [Decorator](decorator) [:notebook:](https://en.wikipedia.org/wiki/Decorator_pattern)
  * [Flyweight](flyweight) [:notebook:](https://en.wikipedia.org/wiki/Flyweight_pattern)
  * [Proxy](proxy) [:notebook:](https://en.wikipedia.org/wiki/Proxy_pattern)
+ * [Visitor](visitor) [:notebook:](https://en.wikipedia.org/wiki/Visitor_pattern)
