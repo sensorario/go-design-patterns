@@ -1,59 +1,78 @@
 package main
 
-import (
-	"fmt"
-)
+import "fmt"
 
-type Parts interface {
-	AcceptVisitor(Visitor)
+type Card interface {
+	GetTitle() string
+	GetPoints() int
+}
+
+type Visitable interface {
+	Accept(v Visitor)
+}
+
+type Task struct {
+	Title string
+	Time  int
+}
+
+func (b *Task) GetTitle() string {
+	return b.Title
+}
+
+func (b *Task) GetPoints() int {
+	return b.Time
+}
+
+func (b *Task) Accept(v Visitor) {
+	v.Visit(b)
+}
+
+type Bug struct {
+	Title string
+	Time  int
+}
+
+func (b *Bug) GetTitle() string {
+	return b.Title
+}
+
+func (b *Bug) GetPoints() int {
+	return b.Time
+}
+
+func (b *Bug) Accept(v Visitor) {
+	v.Visit(b)
 }
 
 type Visitor interface {
-	Visit(message *Message)
+	Visit(t Card)
 }
 
-type Message struct {
-	Content string
+type EstimationVisitor struct {
+	Sum int
 }
 
-type LogMessage struct {
-	parts []Parts
-}
-
-type ConcreteVisitor struct {
-	FullMessage []string
-}
-
-func (aLog *Message) AcceptVisitor(visitor Visitor) {
-	visitor.Visit(aLog)
-}
-
-func (aLog *LogMessage) AcceptVisitor(visitor Visitor) {
-	for _, part := range aLog.parts {
-		part.AcceptVisitor(visitor)
-	}
-}
-
-func (aLog *ConcreteVisitor) Visit(message *Message) {
-	aLog.FullMessage = append(
-		aLog.FullMessage,
-		message.Content,
-	)
-}
-
-func NewInfoLogString(message *Message) *LogMessage {
-	aLog := new(LogMessage)
-	aLog.parts = []Parts{
-		&Message{"[yyyy-mm-dd]"},
-		&Message{"INFO"},
-		message,
-	}
-	return aLog
+func (e *EstimationVisitor) Visit(t Card) {
+	e.Sum += t.GetPoints()
 }
 
 func main() {
-	msg := NewInfoLogString(&Message{"Messaggio"})
-	visitor := new(ConcreteVisitor)
-	msg.AcceptVisitor(visitor)
-	fmt.Println(visitor.FullMessage)
+	nextRelease := []Visitable{
+		&Task{"Do stuff", 1},
+		&Task{"Implement Foo Bar", 5},
+		&Bug{"Error 500 on resource /foo/bar", 3},
+	}
+
+	storyPoint := new(EstimationVisitor)
+
+	for _, i := range nextRelease {
+		i.Accept(storyPoint)
+	}
+
+	fmt.Println(
+		"Next release is calulated in",
+		storyPoint.Sum,
+		"story points",
+	)
 }
