@@ -5,56 +5,55 @@ import (
 )
 
 type Parts interface {
-	AcceptVisitor(PartsVisitor)
+	AcceptVisitor(Visitor)
+}
+
+type Visitor interface {
+	Visit(message *Message)
 }
 
 type Message struct {
 	Content string
 }
 
-func (aLog *Message) AcceptVisitor(visitor PartsVisitor) {
-	visitor.Append(aLog)
-}
-
 type LogMessage struct {
 	parts []Parts
 }
 
-func NewLogMessage() *LogMessage {
-	aLog := new(LogMessage)
-	aLog.parts = []Parts{
-		&Message{"[yyyy-mm-dd]"},
-		&Message{"INFO"},
-	}
-	return aLog
+type ConcreteVisitor struct {
+	FullMessage []string
 }
 
-func (aLog *LogMessage) AcceptVisitor(visitor PartsVisitor) {
+func (aLog *Message) AcceptVisitor(visitor Visitor) {
+	visitor.Visit(aLog)
+}
+
+func (aLog *LogMessage) AcceptVisitor(visitor Visitor) {
 	for _, part := range aLog.parts {
 		part.AcceptVisitor(visitor)
 	}
 }
 
-//Interface of the visitor
-type PartsVisitor interface {
-	Append(message *Message)
+func (aLog *ConcreteVisitor) Visit(message *Message) {
+	aLog.FullMessage = append(
+		aLog.FullMessage,
+		message.Content,
+	)
 }
 
-//Concrete Implementation of the visitor
-type GetMessageVisitor struct {
-	FullMessage []string
-}
-
-func (aLog *GetMessageVisitor) Append(message *Message) {
-	aLog.FullMessage = append(aLog.FullMessage, fmt.Sprintf("Visiting the %v message", message.Content))
+func NewInfoLogString(message *Message) *LogMessage {
+	aLog := new(LogMessage)
+	aLog.parts = []Parts{
+		&Message{"[yyyy-mm-dd]"},
+		&Message{"INFO"},
+		message,
+	}
+	return aLog
 }
 
 func main() {
-	msg := NewLogMessage()
-	visitor := new(GetMessageVisitor)
+	msg := NewInfoLogString(&Message{"Messaggio"})
+	visitor := new(ConcreteVisitor)
 	msg.AcceptVisitor(visitor)
-	fmt.Println(
-		"The final message is:",
-		visitor.FullMessage,
-	)
+	fmt.Println(visitor.FullMessage)
 }
