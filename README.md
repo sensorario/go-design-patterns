@@ -12,6 +12,7 @@
  * [Memento](behavioral/memento) [:notebook:](https://en.wikipedia.org/wiki/Memento_pattern)
  * [Strategy](behavioral/strategy) [:notebook:](https://en.wikipedia.org/wiki/Strategy_pattern)
  * [Template](behavioral/template) [:notebook:](https://en.wikipedia.org/wiki/Template_pattern)
+ * [Visitor](behavioral/visitor) [:notebook:](https://en.wikipedia.org/wiki/Visitor_pattern)
 
 ## [Creational](creational)
 
