@@ -10,4 +10,4 @@ We are going to deal with behaviors instead of define structures or encapsulate 
  * [Memento](memento) [:notebook:](https://en.wikipedia.org/wiki/Memento_pattern)
  * [Strategy](strategy) [:notebook:](https://en.wikipedia.org/wiki/Strategy_pattern)
  * [Template](template) [:notebook:](https://en.wikipedia.org/wiki/Template_pattern)
-
+ * [Visitor](visitor) [:notebook:](https://en.wikipedia.org/wiki/Visitor_pattern)
