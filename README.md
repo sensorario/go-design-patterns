@@ -13,6 +13,10 @@
  * [Strategy](behavioral/strategy) [:notebook:](https://en.wikipedia.org/wiki/Strategy_pattern)
  * [Template](behavioral/template) [:notebook:](https://en.wikipedia.org/wiki/Template_pattern)
  * [Visitor](behavioral/visitor) [:notebook:](https://en.wikipedia.org/wiki/Visitor_pattern)
+ * Iterator
+ * Mediator
+ * Observer
+ * State
 
 ## [Creational](creational)
 
