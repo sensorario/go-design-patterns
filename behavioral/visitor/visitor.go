@@ -64,15 +64,15 @@ func main() {
 		&Bug{"Error 500 on resource /foo/bar", 3},
 	}
 
-	storyPoint := new(EstimationVisitor)
+	storyPoints := new(EstimationVisitor)
 
 	for _, i := range nextRelease {
-		i.Accept(storyPoint)
+		i.Accept(storyPoints)
 	}
 
 	fmt.Println(
 		"Next release is calulated in",
-		storyPoint.Sum,
+		storyPoints.Sum,
 		"story points",
 	)
 }
