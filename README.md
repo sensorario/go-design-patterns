@@ -7,7 +7,7 @@
 ## [Behavioral](behavioral)
 
  * Iterator
- * Mediator
+ * [Mediator](behavioral/mediator) [:notebook:](https://en.wikipedia.org/wiki/Mediator_pattern)
  * Observer
  * [Chain of responsiblity](behavioral/chain) [:notebook:](https://en.wikipedia.org/wiki/Chain-of-responsibility_pattern)
  * [Command](behavioral/command) [:notebook:](https://en.wikipedia.org/wiki/Command_pattern)
