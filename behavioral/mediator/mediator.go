@@ -20,7 +20,7 @@ func main() {
 	fmt.Println(len(teacher.attendees))
 	fmt.Println(student.Class())
 
-	eteacher.Spread("Message sent to everyone")
+	teacher.Spread("Message sent to everyone")
 
 	fmt.Println(student.Learned())
 
