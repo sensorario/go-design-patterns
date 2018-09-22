@@ -7,11 +7,11 @@
 ## [Behavioral](behavioral)
 
  * Iterator
- * Mediator
  * Observer
  * [Chain of responsiblity](behavioral/chain) [:notebook:](https://en.wikipedia.org/wiki/Chain-of-responsibility_pattern)
  * [Command](behavioral/command) [:notebook:](https://en.wikipedia.org/wiki/Command_pattern)
  * [Interpreter](behavioral/interpreter) [:notebook:](https://en.wikipedia.org/wiki/Interpreter_pattern)
+ * [Mediator](behavioral/mediator) [:notebook:](https://en.wikipedia.org/wiki/Mediator_pattern)
  * [Memento](behavioral/memento) [:notebook:](https://en.wikipedia.org/wiki/Memento_pattern)
  * [State](behavioral/state) [:notebook:](https://en.wikipedia.org/wiki/State_pattern)
  * [Strategy](behavioral/strategy) [:notebook:](https://en.wikipedia.org/wiki/Strategy_pattern)
