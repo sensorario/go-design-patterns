@@ -1,5 +1,11 @@
 # Behavioral » Strategy
 
+## Intent
+
+ - define more algorithms to solve same problem;
+ - capture the abstraction in an interface;
+ - keep implementation details in derived classes;
+
 ## Description
 
 The strategy pattern uses different algorithms to achieve some specific functionality. These algorithms are hidden behind an interface and, of course, they must be interchangeable. All algorithms achieve same functionality in a different way.
