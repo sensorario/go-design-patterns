@@ -9,6 +9,7 @@ We are going to deal with behaviors instead of define structures or encapsulate 
  * [Interpreter](interpreter) [:notebook:](https://en.wikipedia.org/wiki/Interpreter_pattern)
  * [Mediator](mediator) [:notebook:](https://en.wikipedia.org/wiki/Mediator_pattern)
  * [Memento](memento) [:notebook:](https://en.wikipedia.org/wiki/Memento_pattern)
+ * [Observer](observer) [:notebook:](https://en.wikipedia.org/wiki/Observer_pattern)
  * [State](state) [:notebook:](https://en.wikipedia.org/wiki/State_pattern)
  * [Strategy](strategy) [:notebook:](https://en.wikipedia.org/wiki/Strategy_pattern)
  * [Template](template) [:notebook:](https://en.wikipedia.org/wiki/Template_pattern)
