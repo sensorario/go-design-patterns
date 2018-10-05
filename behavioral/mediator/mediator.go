@@ -6,12 +6,22 @@ func NewClassMate(name string) Student {
 	return &ClassMate{name, "meeting 1", ""}
 }
 
+/**
+@todo: add a course as mediator
+object that interacts with other
+objects:
+ - teacher
+ - student
+*/
+
 func main() {
 
 	teacher := Teacher{}
 
 	student := NewClassMate("Mario")
 
+	/** @todo: add variadic arguments
+	and add student in one step */
 	teacher.TeachesTo(student)
 	teacher.TeachesTo(NewClassMate("Demo"))
 	teacher.TeachesTo(NewClassMate("Mattia"))
