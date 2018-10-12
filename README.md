@@ -6,7 +6,6 @@
 
 ## [Behavioral](behavioral)
 
- * Iterator
  * [Chain of responsiblity](behavioral/chain) [:notebook:](https://en.wikipedia.org/wiki/Chain-of-responsibility_pattern)
  * [Command](behavioral/command) [:notebook:](https://en.wikipedia.org/wiki/Command_pattern)
  * [Interpreter](behavioral/interpreter) [:notebook:](https://en.wikipedia.org/wiki/Interpreter_pattern)
