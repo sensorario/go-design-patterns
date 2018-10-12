@@ -68,14 +68,19 @@ func TestSubject(t *testing.T) {
 		if len(publisher.ObserverList) != 2 {
 			t.Fail()
 		}
-
 	})
 
 	t.Run("Notify", func(t *testing.T) {
 		for _, observer := range publisher.ObserverList {
 			printObserver, _ := observer.(*TestObserver)
-			publisher.NotifyObservers("hello")
+			message := "hello"
+			publisher.NotifyObservers(message)
+
 			if printObserver.Message == "" {
+				t.Error()
+			}
+
+			if printObserver.Message != message {
 				t.Error()
 			}
 		}
