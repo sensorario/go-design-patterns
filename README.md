@@ -17,6 +17,10 @@
  * [Template](behavioral/template) [:notebook:](https://en.wikipedia.org/wiki/Template_pattern)
  * [Visitor](behavioral/visitor) [:notebook:](https://en.wikipedia.org/wiki/Visitor_pattern)
 
+## [Concurrency](concurrency)
+
+ * [Barrier](concurrency/barrier) [:notebook:](https://en.wikipedia.org/wiki/Barrier_(computer_science))
+
 ## [Creational](creational)
 
  * [Abstract Factory method](creational/abstract_factory) [:notebook:](http://en.wikipedia.org/wiki/Abstract_Factory_pattern)
