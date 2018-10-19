@@ -48,7 +48,7 @@ func barrier(urls ...string) {
 Instead, makeRequest function get the content, makes a covertion to string and
 return to channel everythin.
 
-```
+```go
 func makeRequest(out chan<- Response, url string) {
 	// …
 
