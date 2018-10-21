@@ -1,4 +1,6 @@
-# Future
+# Concurrency » Future
+
+## Description
 
 The future pattern aims do define both success ad failure behavior and delegate
 to  "the future" the responsibility to chose which one behavior must be
@@ -28,7 +30,9 @@ go func(num int) {
 wg.Wait()
 ```
 
-But now let's build a real implementation of the pattern. First of all we
+## Implementation
+
+Now let's build a real implementation of the pattern. First of all we
 should define some functions for the future:
 
  - SuccessFunc
