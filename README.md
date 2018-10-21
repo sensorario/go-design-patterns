@@ -20,6 +20,7 @@
 ## [Concurrency](concurrency)
 
  * [Barrier](concurrency/barrier) [:notebook:](https://en.wikipedia.org/wiki/Barrier_(computer_science))
+ * [Future](concurrency/future) [:notebook:](https://en.wikipedia.org/wiki/Futures_and_promises)
 
 ## [Creational](creational)
 
