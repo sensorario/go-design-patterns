@@ -2,11 +2,13 @@
 
 ## Description
 
-The future pattern aims do define both success ad failure behavior and delegate
-to  "the future" the responsibility to chose which one behavior must be
-executed.
+This design pattern describe an object that acts as a proxy for a result that is
+initially unknown, usually because the computation of its value is yet incomplete.
 
-The following is a solution with row code (and no possi
+The following is a solution with row code. First function in case of failure and
+second function in case of success. Here, for semplicity is just checked that the
+number is equal or not to 42. In a real world example there could be an http call
+or a query to database. Let's imagine whatever you want.
 
 ```go
 var wg sync.WaitGroup
@@ -14,11 +16,13 @@ wg.Add(1)
 
 go func(num int) {
   if num != 42 {
+    // in case of failure
     func() {
       fmt.Println("wrong answer")
       wg.Done()
     }()
   } else {
+    // in case of success
     func() {
       fmt.Println("right answer")
       wg.Done()
