@@ -58,5 +58,5 @@ func (u *UserList) FindUser(id int32) (User, error) {
 			return (*u)[i], nil
 		}
 	}
-	return User{}, fmt.Errorf("User %s could not be found\n", id)
+	return User{}, fmt.Errorf("User %d could not be found\n", id)
 }

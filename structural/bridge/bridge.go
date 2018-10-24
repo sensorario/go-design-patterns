@@ -9,7 +9,7 @@ import (
 type PrinterImp1 struct{}
 
 func (p *PrinterImp1) PrintMessage(msg string) error {
-	fmt.Println("%s\n", msg)
+	fmt.Println(msg)
 	return nil
 }
 
