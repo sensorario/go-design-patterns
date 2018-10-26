@@ -19,9 +19,9 @@ type x struct { }
 func step(in <-chan x) <-chan x {
 	out := make(chan x, 100)
 	go func() {
-    for i := range in {
-      // do something
-    }
+		for i := range in {
+			// do something
+		}
 		close(out)
 	}()
 	return out
