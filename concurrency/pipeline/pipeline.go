@@ -1,14 +1,37 @@
 package main
 
 import "fmt"
+import "strings"
+import "strconv"
 
-func StartPipeline(amount int) int {
-	return <-power(
-		generator(amount),
-	)
+func StartPipeline(amount int) string {
+	source := generator(amount)
+	sum := sum(source)
+	foo := appendFoo(sum)
+	return <-appendBar(foo)
 }
 
-func power(in <-chan int) <-chan int {
+func appendBar(in <-chan string) <-chan string {
+	out := make(chan string, 100)
+	go func() {
+		bar := <-in
+		out <- string(strings.Join([]string{bar, "bar"}, ":"))
+		close(out)
+	}()
+	return out
+}
+
+func appendFoo(in <-chan int) <-chan string {
+	out := make(chan string, 100)
+	go func() {
+		foo := <-in
+		out <- string(strings.Join([]string{strconv.Itoa(foo), "foo"}, ":"))
+		close(out)
+	}()
+	return out
+}
+
+func sum(in <-chan int) <-chan int {
 	out := make(chan int, 100)
 	go func() {
 		var sum int
