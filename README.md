@@ -21,6 +21,7 @@
 
  * [Barrier](concurrency/barrier) [:notebook:](https://en.wikipedia.org/wiki/Barrier_(computer_science))
  * [Future](concurrency/future) [:notebook:](https://en.wikipedia.org/wiki/Futures_and_promises)
+ * [Pipeline](concurrency/pipeline) [:notebook:](https://en.wikipedia.org/wiki/Pipeline_(software))
 
 ## [Creational](creational)
 
