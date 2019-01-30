@@ -4,7 +4,7 @@
 
 The interpreter design pattern is used to solve business cases where it's
 useful to have a language to perform common operations. The most famous
-intepreter we can talk about is probably SQL.
+interpreter we can talk about is probably SQL.
 
 ## Implementation
 

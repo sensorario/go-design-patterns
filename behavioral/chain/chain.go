@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"log"
 	"strconv"
 )
 
@@ -17,15 +16,15 @@ type EnglishTranslator struct {
 	next TranslatorRing
 }
 
-func (fr *EnglishTranslator) Next(r TranslatorRing) {
+func (fr EnglishTranslator) Next(r TranslatorRing) {
 	fr.next = r
 }
 
-func (fr *EnglishTranslator) GetNext() TranslatorRing {
+func (fr EnglishTranslator) GetNext() TranslatorRing {
 	return fr.next
 }
 
-func (fr *EnglishTranslator) KnowsWord(s string) bool {
+func (fr EnglishTranslator) KnowsWord(s string) bool {
 	dict := ItalianToEnglishDictionary()
 	if _, ok := dict[s]; ok {
 		return true
@@ -33,12 +32,12 @@ func (fr *EnglishTranslator) KnowsWord(s string) bool {
 	return false
 }
 
-func (fr *EnglishTranslator) TranslationOf(s string) string {
+func (fr EnglishTranslator) TranslationOf(s string) string {
 	dict := ItalianToEnglishDictionary()
 	if val, ok := dict[s]; ok {
 		return val
 	}
-	panic("Oops!")
+	panic("Oops! Wrong translation requested")
 }
 
 func ItalianToEnglishDictionary() map[string]string {
@@ -72,7 +71,7 @@ func (fr *FrenchTranslator) TranslationOf(s string) string {
 	if val, ok := dict[s]; ok {
 		return val
 	}
-	panic("Wrong translation requested")
+	panic("Oops! Wrong translation requested")
 }
 
 func ItalianToFrancaisDictionary() map[string]string {
@@ -97,7 +96,7 @@ func (fr *SpanishTranslator) KnowsWord(s string) bool {
 	if _, ok := dict[s]; ok {
 		return true
 	}
-	return false
+	panic("Oops! Wrong translation requested")
 }
 
 func (fr *SpanishTranslator) TranslationOf(s string) string {
@@ -105,7 +104,7 @@ func (fr *SpanishTranslator) TranslationOf(s string) string {
 	if val, ok := dict[s]; ok {
 		return val
 	}
-	panic("Wrong translation requested")
+	panic("Oops! Wrong translation requested")
 }
 
 func ItalianToSpanishDictionary() map[string]string {
@@ -119,16 +118,16 @@ type TranslatorChain struct {
 	Start TranslatorRing
 }
 
-func (h *TranslatorChain) Translate(s string) string {
+func (h *TranslatorChain) Translate(s string) (string, error) {
 	r := h.Start
 	for {
 		if r.KnowsWord(s) {
-			return r.TranslationOf(s)
+			return r.TranslationOf(s), nil
 		}
 		if r.GetNext() != nil {
 			r = r.GetNext()
 		} else {
-			log.Fatal("No translation found")
+			panic("Oops! Missing translation")
 		}
 	}
 }
