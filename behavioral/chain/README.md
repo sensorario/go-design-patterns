@@ -70,7 +70,6 @@ func NewEnglishDict() map[string]string {
 	dict["cocomero"] = "watermelon"
 	return dict
 }
-
 ```
 
 Finally, we have a client that works with the entire chain.
