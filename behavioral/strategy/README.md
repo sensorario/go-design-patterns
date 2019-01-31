@@ -2,13 +2,19 @@
 
 ## Description
 
-The strategy pattern uses different algorithms to achieve some specific functionality. These algorithms are hidden behind an interface and, of course, they must be interchangeable. All algorithms achieve same functionality in a different way.
+The strategy pattern uses different algorithms to achieve some specific
+functionality. These algorithms are hidden behind an interface and, of course,
+they must be interchangeable. All algorithms achieve same functionality in a
+different way.
 
-For example, `io.Writer` interface defines a strategy ti write, and the funcionality is always the sam.
+For example, `io.Writer` interface defines a strategy ti write, and the
+functionality is always the same.
 
 ## Implementation
 
-Main feature of this pattern is that we can have different algorithms that uses same interface. In this example we'll print some content to a different output using different strategies:
+Main feature of this pattern is that we can have different algorithms that uses
+same interface. In this example we'll print some content to a different output
+using different strategies:
 
  - FileStrategy
  - ConsoleStrategy
@@ -23,7 +29,9 @@ type PrintStrategy interface {
 }
 ```
 
-As said few words ago, we have two strategies. One to print contents in console and another for files.
+As said few words ago, we have two strategies. One to print contents in console
+and another for files.
+
 ```go
 type ConsoleStrategy struct{}
 
@@ -58,9 +66,12 @@ func (c *FileStrategy) Print() error {
 }
 ```
 
-Code of `tplParams()` and `tplTemplate()` is omitted here. It provide a simple template and params to build it.
+Code of `tplParams()` and `tplTemplate()` is omitted here. It provide a simple
+template and parameters to build it.
 
-Main program will get from console the flag "strategy". If omitted, ConsoleStrategy will be selected and the template rendered will be visible in console. Otherwise, if strategy flag is sent with:
+Main program will get from console the flag "strategy". If omitted,
+ConsoleStrategy will be selected and the template rendered will be visible in
+console. Otherwise, if strategy flag is sent with:
 
 > $ go run strategy.go --strategy=file
 

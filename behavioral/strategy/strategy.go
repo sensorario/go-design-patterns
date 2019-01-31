@@ -2,7 +2,6 @@ package main
 
 import (
 	"bytes"
-	"flag"
 	"fmt"
 	"os"
 	"text/template"
@@ -18,8 +17,12 @@ type FileStrategy struct {
 	DestinationFilePath string
 }
 
+func (c *ConsoleStrategy) BuildOutput() string {
+	return "ConsoleStrategy"
+}
+
 func (c *ConsoleStrategy) Print() error {
-	fmt.Println("ConsoleStrategy")
+	fmt.Println(c.BuildOutput())
 	lister, _ := template.New("foo").Parse(tplTemplate())
 	lister.Execute(os.Stdout, tplParams())
 	return nil
@@ -54,22 +57,4 @@ func tplTemplate() string {
 		"{{$el}}" +
 		"{{if eq $i $.last}}.{{else}}, {{end}}" +
 		"{{end}}"
-}
-
-func main() {
-	strategy := flag.String("strategy", "console", "selected strategy")
-	flag.Parse()
-
-	var printStrategy PrintStrategy
-
-	switch *strategy {
-	case "console":
-		printStrategy = &ConsoleStrategy{}
-	case "file":
-		printStrategy = &FileStrategy{"bigciao"}
-	default:
-		printStrategy = &ConsoleStrategy{}
-	}
-
-	printStrategy.Print()
 }
