@@ -1,12 +1,20 @@
 # Visitor
 
-The visitor pattern is a way to separate algorithm from an object structure. It is one way to implement the open/closed principle of SOLID. It allows to add functionalities without object modification. A visitor take the object instance as input and implements the algorithm.
+The visitor pattern is a way to separate algorithm from an object structure. It
+is one way to implement the open/closed principle of SOLID. It allows to add
+functionalities without object modification. A visitor take the object instance
+as input and implements the algorithm.
 
 ## Implementation
 
-In the following implementation we will create a visitor that will visit all cards inside a project. Each card represents a Task or a Bug. Each card contains a title and some points. Here, card is an interface that for simplicity implement just a part of a complete card.
+In the following implementation we will create a visitor that will visit all
+cards inside a project. Each card represents a Task or a Bug. Each card
+contains a title and some points. Here, card is an interface that for
+simplicity implement just a part of a complete card.
 
-Let's start from the card interface. Each card will contains, at least, GetTitle() and GetPoints() method. In a real world example each card could contains more and more specific methods. This is just a trivial example.
+Let's start from the card interface. Each card will contains, at least,
+GetTitle() and GetPoints() method. In a real world example each card could
+contains more and more specific methods. This is just a trivial example.
 
 ```go
 type Card interface {
@@ -45,7 +53,9 @@ func (b *Bug) GetPoints() int {
 }
 ```
 
-Until now we have not yet visitor pattern elements. We just have bugs and tasks.  In the visitor pattern there always be `Visitable` and `Visitor` items. Our visitor will visit a card. All visitable item must accecpt a visitor.
+Until now we have not yet visitor pattern elements. We just have bugs and
+tasks.  In the visitor pattern there always be `Visitable` and `Visitor` items.
+Our visitor will visit a card. All visitable item must accept a visitor.
 
 ```go
 type Visitable interface {
@@ -57,7 +67,7 @@ type Visitor interface {
 }
 ```
 
-Now we want that alla cards are visitable.
+Now we want that all cards are visitable.
 
 ```go
 func (b *Task) Accept(v Visitor) {
@@ -69,7 +79,8 @@ func (b *Bug) Accept(v Visitor) {
 }
 ```
 
-And here we have the visitor: a service that sum each cards points. As we can see the logic is not in Bug object nor in Task.
+And here we have the visitor: a service that sum each cards points. As we can
+see the logic is not in Bug object nor in Task.
 
 ```go
 type EstimationVisitor struct {
