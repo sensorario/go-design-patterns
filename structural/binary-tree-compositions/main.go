@@ -4,6 +4,12 @@ import (
 	"fmt"
 )
 
+type Tree struct {
+	LeafValue int
+	Right     *Tree
+	Left      *Tree
+}
+
 func main() {
 	root := Tree{
 		LeafValue: 0,
