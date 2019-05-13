@@ -1,5 +1,11 @@
 # Behavioral » Strategy
 
+## Elements
+
+ - Context
+ - Strategy
+ - Concrete Strategy
+
 ## Description
 
 The strategy pattern uses different algorithms to achieve some specific
