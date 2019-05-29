@@ -1,5 +1,13 @@
 # Proxy
 
+## Elements
+
+ - Proxy
+ - RealSubject
+ - Client
+
+## Description
+
 The design pattern usually wraps an object to hide some of its characteristics. The objectives of this patterns are ti hide an object behind the proxy so the features can be hidden, restricted and so on. Again, it provide a new abstraction layer that is easy to work with, and can be changed easily.
 
 In this example we have a database of users.
