@@ -2,7 +2,10 @@
 
 ## Elements
 
-*to do*
+ - Flyweight
+ - ConcreteFlyweight
+ - FlyweightFactoy
+ - Client
 
 ## Dscription
 

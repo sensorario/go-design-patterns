@@ -1,5 +1,11 @@
 # Behavioral » Mediator
 
+## Elements
+
+ - Mediator
+ - Concrete Mediator
+ - Colleague Class
+
 ## Description
 
 It defined an object that encapsulate the manner of how a set of objects

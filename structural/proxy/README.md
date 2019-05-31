@@ -4,7 +4,7 @@
 
  - Proxy
  - RealSubject
- - Client
+ - Subject
 
 ## Description
 

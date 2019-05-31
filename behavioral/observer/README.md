@@ -1,5 +1,12 @@
 # Behavioral » Observer
 
+## Elements
+
+ - Observable
+ - ConcreteObservable
+ - Observer
+ - ConcreteObserver
+
 ## Description
 
 This pattern uncouple an event from its possible handlers. It is useful to

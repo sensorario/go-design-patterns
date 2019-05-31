@@ -1,5 +1,11 @@
 # Behavioral » Memento
 
+## Elements
+
+ - Memento
+ - Originator
+ - Caretaker
+
 ## Description
 
 The memento pattern provides the ability to restore an object to of its

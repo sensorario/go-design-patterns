@@ -1,5 +1,11 @@
 # Chain of responsibility
 
+## Elements
+
+ - Handler
+ - RequestHandler
+ - Client
+
 ## Description
 
 It consists of a source of command objects and a series of processing objects.
