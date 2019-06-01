@@ -1,4 +1,4 @@
-# # Behavioral » Chain of responsibility
+# Behavioral » Chain of responsibility
 
 ## Elements
 
