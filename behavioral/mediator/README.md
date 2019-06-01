@@ -2,9 +2,9 @@
 
 ## Elements
 
- - Mediator
- - Concrete Mediator
- - Colleague Class
+ - Mediator - interface to mediate between colleagues
+ - Concrete Mediator - transfer messages between colleague
+ - Colleague Class - communicate to the mediator to communicate with other object
 
 ## Description
 
