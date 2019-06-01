@@ -2,9 +2,9 @@
 
 ## Elements
 
- - Handler
- - RequestHandler
- - Client
+ - Handler - an interface for requests handling
+ - RequestHandler - handles requests it is responsible for
+ - Client - sends commands to the first object in the chain that may handle the command
 
 ## Description
 
