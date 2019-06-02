@@ -2,10 +2,10 @@
 
 ## Elements
 
- - Observable
- - ConcreteObservable
- - Observer
- - ConcreteObserver
+ - Observable/Subject - interface that define attach/detach operations
+ - ConcreteObservable - maintain the state of an object and notifies attached observer
+ - Observer - interface that defines how to notify
+ - ConcreteObserver - the object that receive notifications
 
 ## Description
 
