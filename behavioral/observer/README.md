@@ -1,5 +1,12 @@
 # Behavioral » Observer
 
+## Elements
+
+ - Observable/Subject - interface that define attach/detach operations
+ - ConcreteObservable - maintain the state of an object and notifies attached observer
+ - Observer - interface that defines how to notify
+ - ConcreteObserver - the object that receive notifications
+
 ## Description
 
 This pattern uncouple an event from its possible handlers. It is useful to

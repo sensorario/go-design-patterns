@@ -1,5 +1,14 @@
 # Decorator
 
+## Elements
+
+ - Component
+ - Decorator
+ - Concrete Component
+ - Concrete Decorator
+
+## Description
+
 The decorator pattern provide a lot of benefits when working with legacy code. In this example legacy code is represented by a legacy recipe. A decorator add functionality and in this example decorators are new ingredients.
 
 ```go

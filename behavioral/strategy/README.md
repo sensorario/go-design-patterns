@@ -1,5 +1,10 @@
 # Behavioral » Strategy
 
+## Elements
+
+ - Strategy: the interface that define the behavior;
+ - Concrete Strategy: each different implementation that respects the strategy;
+
 ## Description
 
 The strategy pattern uses different algorithms to achieve some specific

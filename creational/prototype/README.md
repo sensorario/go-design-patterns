@@ -1,5 +1,11 @@
 # Creational » Prototype
 
+## Elements
+
+ - Client
+ - Prototype
+ - ConcretePrototype
+
 ## Description
 
 With this pattern, is used an already created instance of some type to clone it and complete it with the particular needs of each context. Objects to clone are created at compilation time and can be cloned as many times it is needed at runtime.

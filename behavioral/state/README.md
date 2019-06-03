@@ -1,5 +1,11 @@
 # Behavioral » State
 
+## Elements
+
+ - Step: an interface that defines each step;
+ - Contest: the one that know current step;
+ - Client: the part that iterate steps;
+
 ## Description
 
 State is used to encapsulate different states behaviors of the same object.

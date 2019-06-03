@@ -1,5 +1,15 @@
 # Visitor
 
+## Elements
+
+ - Visitor: interface used to declare the visit operations;
+ - ConcreteVisitor: the one that implement visitor interface;
+ - Visitable: declares the accept operation, it enables an object to be "visited";
+ - ConcreteVisitable: each class that implements the Visitable interface and receive viditor;
+ - ObjectStructure: containing all the objects that can be visited;
+
+## Description
+
 The visitor pattern is a way to separate algorithm from an object structure. It
 is one way to implement the open/closed principle of SOLID. It allows to add
 functionalities without object modification. A visitor take the object instance

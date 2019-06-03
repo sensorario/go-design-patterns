@@ -1,19 +1,12 @@
 # Behavioral » Memento
 
+## Elements
+
+ - Memento - store originator object
+ - Originator - build/create mementos
+ - Caretaker - keep the memento
+
 ## Description
-
-The memento pattern provides the ability to restore an object to of its
-previous state (undo via rollback). It is implemented with three elements:
-
- - memento
- - originator
- - caretaker
-
-The `memento` is an extra-layer not yet saved. The `originator` is a type in
-charge to build/create the mementos. Finally, the `caretaker` is the type that
-stores the lists of mementos.
-
-## Implementation
 
 Every time we create new memento object, its state is taken from the originator
 element of the design pattern.

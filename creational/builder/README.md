@@ -1,5 +1,12 @@
 # Creational » Builder
 
+## Elements
+
+ - Builder
+ - ConcreteBuilder
+ - Director
+ - Product
+
 ## Description
 
 The Builder is a pattern used to build objects. Objects in go can be created with just {}. But in Go is possible to create objects composed by other objects. This is really idiomatic in go, as it doesn't support inheritance.

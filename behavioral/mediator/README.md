@@ -1,5 +1,11 @@
 # Behavioral » Mediator
 
+## Elements
+
+ - Mediator - interface to mediate between colleagues
+ - Concrete Mediator - transfer messages between colleague
+ - Colleague Class - communicate to the mediator to communicate with other object
+
 ## Description
 
 It defined an object that encapsulate the manner of how a set of objects

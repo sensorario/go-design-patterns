@@ -1,5 +1,13 @@
 # Concurrency » Pipeline
 
+## Elements
+
+ - Visitor
+ - ConcreteVisitor
+ - Visitable
+ - ConcreteVisitable
+ - ObjectStructure
+
 ## Description
 
 A pipeline consists of a chain of elements arranged so that the output of each

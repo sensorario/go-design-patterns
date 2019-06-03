@@ -1,5 +1,12 @@
 # Behavioral » Command
 
+## Elements
+
+- Command - an interface for executing operation;
+- ConcreteCommand - implement the Execute method;
+- Client - creates a ConcreteCommand;
+- Invoker - asks the command to carry out the request;
+
 ## Description
 
 While strategy pattern is focused on changing algorithm, in Command pattern the
