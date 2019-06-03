@@ -2,9 +2,8 @@
 
 ## Elements
 
- - Context
- - Strategy
- - Concrete Strategy
+ - Strategy: the interface that define the behavior;
+ - Concrete Strategy: each different implementation that respects the strategy;
 
 ## Description
 

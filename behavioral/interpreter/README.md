@@ -1,5 +1,10 @@
 # Behavioral » Interpreter
 
+## Elements
+
+ - Interpreter: the one who interpret the language;
+ - Language: the whole pattern we need to be interpret;
+
 ## Description
 
 The interpreter design pattern is used to solve business cases where it's

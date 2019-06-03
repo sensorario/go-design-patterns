@@ -1,5 +1,10 @@
 # Template
 
+## Elements
+
+ - Template: an interface that define behavior;
+ - ConcreteTemplate: each class that implement all methods declared in template;
+
 ## Description
 
 [Strategy](../strategy) pattern consists in a different way to solve
