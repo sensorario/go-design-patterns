@@ -34,8 +34,20 @@ func (i *interpreter) exec() int {
 	return sum
 }
 
+func dict() map[string]string {
+	var m map[string]string
+	m = make(map[string]string)
+	m["+"] = "plus"
+	return m
+}
+
 func (i *interpreter) contains(s string) bool {
-	return true
+	m := dict()
+	if _, ok := m[s]; ok {
+		return true
+	}
+
+	return false
 }
 
 func (i *interpreter) of(s string) error {
