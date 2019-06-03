@@ -17,7 +17,7 @@ func TestNodesCantBeNormalString(t *testing.T) {
 func TestFoo(t *testing.T) {
 	sentence := "do something"
 	i := interpreter{}
-	_ = i.of(sentence)
+	i.of(sentence)
 	if i.numberOfWords() != 2 {
 		t.Error("Guarda che ti stai sbagliando")
 	}
@@ -26,7 +26,7 @@ func TestFoo(t *testing.T) {
 func TestPlusOperatorDetector(t *testing.T) {
 	sentence := "2 + 3"
 	i := interpreter{}
-	_ = i.of(sentence)
+	i.of(sentence)
 	if i.contains("+") != true {
 		t.Error("dovrebbe conoscere l'operatore +")
 	}
@@ -38,7 +38,7 @@ func TestPlusOperatorDetector(t *testing.T) {
 func TestSplitSentencesInSplice(t *testing.T) {
 	sentence := "2 + 3"
 	i := interpreter{}
-	_ = i.of(sentence)
+	i.of(sentence)
 	expected := []string{"2", "+", "3"}
 	for ind, _ := range expected {
 		tok := i.tokens()
@@ -51,7 +51,7 @@ func TestSplitSentencesInSplice(t *testing.T) {
 func TestCountNumberOfOperators(t *testing.T) {
 	sentence := "2 + 3"
 	i := interpreter{}
-	_ = i.of(sentence)
+	i.of(sentence)
 	expected := []string{"2", "+", "3"}
 	for ind, _ := range expected {
 		tok := i.tokens()
@@ -64,7 +64,7 @@ func TestCountNumberOfOperators(t *testing.T) {
 func TestExec(t *testing.T) {
 	sentence := "5 + 3"
 	i := interpreter{}
-	_ = i.of(sentence)
+	i.of(sentence)
 	if i.exec() != 8 {
 		t.Error([]string{
 			"La somma di 5 con 3",
@@ -77,7 +77,7 @@ func TestExec(t *testing.T) {
 func TestMulOperator(t *testing.T) {
 	sentence := "5 * 3"
 	i := interpreter{}
-	_ = i.of(sentence)
+	i.of(sentence)
 	if i.exec() != 15 {
 		t.Error([]string{
 			"Multiplication between 5 and 3",
