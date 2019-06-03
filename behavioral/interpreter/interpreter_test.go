@@ -23,16 +23,15 @@ func TestFoo(t *testing.T) {
 	}
 }
 
-const (
-	PLUS = "+"
-)
-
 func TestPlusOperatorDetector(t *testing.T) {
 	sentence := "2 + 3"
 	i := interpreter{}
 	_ = i.of(sentence)
-	if i.contains(PLUS) != true {
+	if i.contains("+") != true {
 		t.Error("dovrebbe conoscere l'operatore +")
+	}
+	if i.contains("unknown") != false {
+		t.Error("non dovrebbe conoscere un operatore sconosciuto")
 	}
 }
 
