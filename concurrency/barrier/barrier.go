@@ -67,10 +67,3 @@ func makeRequest(out chan<- Response, url string) {
 	res.Resp = string(byt)
 	out <- res
 }
-
-func main() {
-	barrier(
-		"http://httpbin.org/headers",
-		"http://httpbin.org/user-agent",
-	)
-}
