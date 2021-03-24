@@ -30,8 +30,14 @@ func TestPlusOperatorDetector(t *testing.T) {
 	if i.contains("+") != true {
 		t.Error("dovrebbe conoscere l'operatore +")
 	}
+}
+
+func TestShouldNotContainUnknownOperator(t *testing.T) {
+	sentence := "2 + 3"
+	i := interpreter{}
+	i.of(sentence)
 	if i.contains("unknown") != false {
-		t.Error("non dovrebbe conoscere un operatore sconosciuto")
+		t.Error("it should not known unknown operator")
 	}
 }
 
@@ -43,7 +49,7 @@ func TestSplitSentencesInSplice(t *testing.T) {
 	for ind, _ := range expected {
 		tok := i.tokens()
 		if expected[ind] != tok[ind] {
-			t.Error("non ci siamo")
+			t.Error("invalid tokens")
 		}
 	}
 }
@@ -61,7 +67,7 @@ func TestCountNumberOfOperators(t *testing.T) {
 	}
 }
 
-func TestExec(t *testing.T) {
+func TestSumOperator(t *testing.T) {
 	sentence := "5 + 3"
 	i := interpreter{}
 	i.of(sentence)
