@@ -71,7 +71,7 @@ func main() {
 	}
 
 	fmt.Println(
-		"Next release is calulated in",
+		"Next release is calculated in",
 		storyPoints.Sum,
 		"story points",
 	)
