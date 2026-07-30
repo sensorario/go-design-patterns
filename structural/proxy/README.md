@@ -1,4 +1,4 @@
-# Proxy
+# Structural » Proxy
 
 ## Elements
 

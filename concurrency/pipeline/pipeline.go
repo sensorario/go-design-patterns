@@ -15,7 +15,7 @@ func appendBar(in <-chan string) <-chan string {
 	out := make(chan string, 100)
 	go func() {
 		bar := <-in
-		out <- string(strings.Join([]string{bar, "bar"}, ":"))
+		out <- strings.Join([]string{bar, "bar"}, ":")
 		close(out)
 	}()
 	return out
@@ -25,7 +25,7 @@ func appendFoo(in <-chan int) <-chan string {
 	out := make(chan string, 100)
 	go func() {
 		foo := <-in
-		out <- string(strings.Join([]string{strconv.Itoa(foo), "foo"}, ":"))
+		out <- strings.Join([]string{strconv.Itoa(foo), "foo"}, ":")
 		close(out)
 	}()
 	return out

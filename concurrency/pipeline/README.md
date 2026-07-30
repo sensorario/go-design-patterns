@@ -2,11 +2,9 @@
 
 ## Elements
 
- - Visitor
- - ConcreteVisitor
- - Visitable
- - ConcreteVisitable
- - ObjectStructure
+ - Source: the first step that generates or provides the initial data stream;
+ - Stage: an intermediate step that receives data from a channel, transforms it, and sends it to the next channel;
+ - Sink: the final step that consumes the output of the last stage;
 
 ## Description
 

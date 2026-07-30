@@ -1,7 +1,7 @@
 package main
 
 import "fmt"
-import "io/ioutil"
+import "io"
 import "net/http"
 import "time"
 
@@ -47,7 +47,7 @@ func barrier(urls ...string) {
 func makeRequest(out chan<- Response, url string) {
 	res := Response{}
 	client := http.Client{
-		Timeout: time.Duration(time.Duration(timeout) * time.Millisecond),
+		Timeout: time.Duration(timeout) * time.Millisecond,
 	}
 
 	resp, err := client.Get(url)
@@ -57,7 +57,7 @@ func makeRequest(out chan<- Response, url string) {
 		return
 	}
 
-	byt, err := ioutil.ReadAll(resp.Body)
+	byt, err := io.ReadAll(resp.Body)
 	if err != nil {
 		res.Err = err
 		out <- res

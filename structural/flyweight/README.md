@@ -7,7 +7,7 @@
  - FlyweightFactoy
  - Client
 
-## Dscription
+## Description
 
 This pattern it's very commonly used in computer graphics and the video game
 industry. It allow sharing the state of a heavy object between many instances of

@@ -1,3 +1,3 @@
 module github.com/sensorario/go-design-patterns
 
-go 1.17
+go 1.21

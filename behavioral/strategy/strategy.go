@@ -43,9 +43,9 @@ func (c *FileStrategy) Print() error {
 	return nil
 }
 
-func tplParams() map[string]interface{} {
+func tplParams() map[string]any {
 	items := []int{1, 1, 2, 3, 5, 8}
-	return map[string]interface{}{
+	return map[string]any{
 		"items": items,
 		"last":  len(items) - 1,
 	}

@@ -1,4 +1,4 @@
-# Composite
+# Structural » Composite
 
 ## Elements
 

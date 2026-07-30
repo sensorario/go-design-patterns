@@ -1,4 +1,4 @@
-# Template
+# Behavioral » Template
 
 ## Elements
 

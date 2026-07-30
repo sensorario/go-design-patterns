@@ -1,4 +1,4 @@
-# Visitor
+# Behavioral » Visitor
 
 ## Elements
 

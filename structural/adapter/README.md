@@ -1,4 +1,4 @@
-# Adapter
+# Structural » Adapter
 
 ## Elements
 

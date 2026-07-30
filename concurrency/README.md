@@ -2,7 +2,7 @@
 
 These patterns manage the timing and order execution.
 
-## Creational
+## Concurrency
 
  * [Barrier](barrier) [:notebook:](https://en.wikipedia.org/wiki/Barrier_(computer_science))
  * [Future](future) [:notebook:](https://en.wikipedia.org/wiki/Futures_and_promises)
